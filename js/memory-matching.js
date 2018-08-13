@@ -20,7 +20,7 @@ function getHubbers(callback) {
                     if (err) {
                         console.warn(err);
                         if (++complete === hubbers.length) {
-                            done(err, window.Hubbers);
+                            done(err, window.Friends);
                         }
                     } else {
                         cHubber.name = user.name;
@@ -36,7 +36,7 @@ function getHubbers(callback) {
     matchingGame.github.get("orgs/github/members", { all: true }, function (err, data) {
         if (err) {
             console.warn(err);
-            data = window.Hubbers;
+            data = window.Friends;
         }
         done(err, data);
     });
@@ -171,15 +171,15 @@ $(function(){
 
             // This is some shit - we are going to dynamically apply css to the card(s).
             $this
-                .css("background", "#efefef url(" + Hubber.avatar_url + ")")
+                .css("background", "#efefef url(" + Friends.avatar_url + ")")
                 .css("background-size", "128px 128px")
 
-            $this.attr("data-pattern",Hubber.login);
+            $this.attr("data-pattern",Friends.login);
 
-            if ($("[data-pattern="+Hubber.login+"] .name").text() == "" && Hubber.name) {
-                $this.find(".name").text(Hubber.name);
+            if ($("[data-pattern="+Friends.login+"] .name").text() == "" && Hubber.name) {
+                $this.find(".name").text(Friends.name);
             } else {
-                $this.find(".login").text(Hubber.login);
+                $this.find(".login").text(Friends.login);
             }
 
             $this.click(selectCard);
