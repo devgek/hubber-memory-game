@@ -5,41 +5,8 @@ var matchingGame = {
 
 matchingGame.deck = []
 
-function getHubbers(callback) {
-    function done (err, hubbers) {
-        hubbers = shuffle(hubbers).slice(0, 8);
-
-        if (err) {
-            return callback({ hubbers: hubbers });
-        }
-
-        var complete = 0;
-        for (var i = 0; i < hubbers.length; ++i) {
-            (function (cHubber) {
-                matchingGame.github.get("users/" + cHubber.login, function (err, user) {
-                    if (err) {
-                        console.warn(err);
-                        if (++complete === hubbers.length) {
-                            done(err, window.Friends);
-                        }
-                    } else {
-                        cHubber.name = user.name;
-                        if (++complete === hubbers.length) {
-                            callback({ hubbers: hubbers });
-                        }
-                    }
-                });
-            })(hubbers[i]);
-        }
-    }
-
-    matchingGame.github.get("orgs/github/members", { all: true }, function (err, data) {
-        if (err) {
-            console.warn(err);
-            data = window.Friends;
-        }
-        done(err, data);
-    });
+function getFriends(callback) {
+    return callback({hubbers: window.Friends});
 }
 
 // http://stackoverflow.com/a/2450976/1420197
@@ -152,7 +119,7 @@ $(function(){
     var $loader = $("#loader");
 
     $cards.hide();
-    getHubbers(function (hubbers) {
+    getFriends(function (hubbers) {
         for (var i = 0; i < hubbers.hubbers.length; ++i) {
             matchingGame.deck.push(hubbers.hubbers[i], hubbers.hubbers[i]);
         }
@@ -167,19 +134,19 @@ $(function(){
                 'top': ($this.height() + 15) * Math.floor(index / 4)
             });
 
-            var Hubber = matchingGame.deck.pop();
+            var Friend = matchingGame.deck.pop();
 
             // This is some shit - we are going to dynamically apply css to the card(s).
             $this
-                .css("background", "#efefef url(" + Friends.avatar_url + ")")
+                .css("background", "#efefef url(" + Friend.picture_path + ")")
                 .css("background-size", "128px 128px")
 
-            $this.attr("data-pattern",Friends.login);
+            $this.attr("data-pattern",Friend.pair_name);
 
-            if ($("[data-pattern="+Friends.login+"] .name").text() == "" && Hubber.name) {
-                $this.find(".name").text(Friends.name);
+            if ($("[data-pattern="+Friend.pair_name+"] .name").text() == "" && Friend.name) {
+                $this.find(".name").text(Friend.name);
             } else {
-                $this.find(".login").text(Friends.login);
+                $this.find(".pair_name").text(Friend.pair_name);
             }
 
             $this.click(selectCard);

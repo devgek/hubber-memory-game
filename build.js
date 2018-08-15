@@ -35,11 +35,11 @@ gh.get("orgs/github/members", { all: true }, function (err, data) {
     Logger.log("Fetching the names.");
     sameTime(data.map(function (c) {
         return function (next) {
-            gh.get("users/" + c.login, function (err, data) {
+            gh.get("users/" + c.pair_name, function (err, data) {
                 if (err) {
-                    Logger.log("Failed to fetch the name for @" + data.login);
+                    Logger.log("Failed to fetch the name for @" + data.pair_name);
                 } else if (data.name) {
-                    Logger.log("Fetched name: " + data.name + " (@" + data.login + ")");
+                    Logger.log("Fetched name: " + data.name + " (@" + data.pair_name + ")");
                 }
                 next(err, data);
             });
@@ -52,9 +52,9 @@ gh.get("orgs/github/members", { all: true }, function (err, data) {
         // Keep only the data we need
         data = data.map(function (c) {
             return {
-                login: c.login
+                pair_name: c.pair_name
               , name: c.name
-              , avatar_url: c.avatar_url
+              , picture_path: c.picture_path
             };
         });
 

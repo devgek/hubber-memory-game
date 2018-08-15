@@ -1,4 +1,15 @@
-var Friends = [{"login":"achiu","name":"Arthur Chiu","avatar_url":"../pictures/gerald.jpg"},
-    {"login":"aitchabee","name":"Heather A. Baldry","avatar_url":"../pictures/gerald.jpg"},
-    {"login":"alysonla","name":"Alyson La","avatar_url":"../pictures/gerald.jpg"},
-    {"login":"amateurhuman","name":"Chris Kelly","avatar_url":"../pictures/gerald.jpg"}]
+var Friends = [
+    {"pair_name":"Salmons","name":"Adrian","picture_path":"/hubber-memory-game/pictures/Adrian.jpg"},
+    {"pair_name":"Zwivos","name":"Ariane","picture_path":"/hubber-memory-game/pictures/Ariane.jpg"},
+    {"pair_name":"Salmons","name":"Birgit","picture_path":"/hubber-memory-game/pictures/Birgit.jpg"},
+    {"pair_name":"Zwivos","name":"Christian","picture_path":"/hubber-memory-game/pictures/Christian.jpg"},
+    {"pair_name":"Wesselys","name":"Claudia","picture_path":"/hubber-memory-game/pictures/Claudia.jpg"},
+    {"pair_name":"Reis","name":"Ernstl","picture_path":"/hubber-memory-game/pictures/Ernstl.jpg"},
+    {"pair_name":"Schöberls","name":"Gabi","picture_path":"/hubber-memory-game/pictures/Gabi.jpg"},
+    {"pair_name":"Wesselics","name":"Gitti","picture_path":"/hubber-memory-game/pictures/Gitti.jpg"},
+    {"pair_name":"Reis","name":"Ilse","picture_path":"/hubber-memory-game/pictures/Ilse.jpg"},
+    {"pair_name":"Nabsis","name":"Karl","picture_path":"/hubber-memory-game/Karl.jpg"},
+    {"pair_name":"Baumis","name":"Sabine","picture_path":"/hubber-memory-game/pictures/Sabine.jpg"},
+    {"pair_name":"Nabsis","name":"Ulli","picture_path":"/hubber-memory-game/pictures/Ulli.jpg"},
+    {"pair_name":"Trudis","name":"Wolfgang","picture_path":"/hubber-memory-game/pictures/Wolfgang.jpg"},
+]
