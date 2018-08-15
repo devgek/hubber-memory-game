@@ -8,7 +8,7 @@ var Friends = [
     {"pair_name":"Schöberls","name":"Gabi","picture_path":"/hubber-memory-game/pictures/Gabi.jpg"},
     {"pair_name":"Wesselics","name":"Gitti","picture_path":"/hubber-memory-game/pictures/Gitti.jpg"},
     {"pair_name":"Reis","name":"Ilse","picture_path":"/hubber-memory-game/pictures/Ilse.jpg"},
-    {"pair_name":"Nabsis","name":"Karl","picture_path":"/hubber-memory-game/Karl.jpg"},
+    {"pair_name":"Nabsis","name":"Karl","picture_path":"/hubber-memory-game/pictures/Karl.jpg"},
     {"pair_name":"Baumis","name":"Sabine","picture_path":"/hubber-memory-game/pictures/Sabine.jpg"},
     {"pair_name":"Nabsis","name":"Ulli","picture_path":"/hubber-memory-game/pictures/Ulli.jpg"},
     {"pair_name":"Trudis","name":"Wolfgang","picture_path":"/hubber-memory-game/pictures/Wolfgang.jpg"},
