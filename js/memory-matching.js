@@ -124,14 +124,14 @@ $(function(){
             matchingGame.deck.push(hubbers.hubbers[i], hubbers.hubbers[i]);
         }
         shuffle(matchingGame.deck);
-        for(var i=0;i<15;i++){
+        for(var i=0;i<23;i++){
             $('.card:first-child').clone().appendTo($cards);
         }
         $cards.children().each(function(index) {
             var $this = $(this);
             $this.css({
-                'left': ($this.width() + 15) * (index % 4),
-                'top': ($this.height() + 15) * Math.floor(index / 4)
+                'left': ($this.width() + 23) * (index % 6),
+                'top': ($this.height() + 23) * Math.floor(index / 6)
             });
 
             var Friend = matchingGame.deck.pop();

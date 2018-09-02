@@ -59,11 +59,11 @@ gh.get("orgs/github/members", { all: true }, function (err, data) {
         });
 
         // Write to file
-        fs.writeFile("js/Hubbers.js", "var Hubbers = " + JSON.stringify(data), function (err) {
+        fs.writeFile("js/Friends.js", "var Hubbers = " + JSON.stringify(data), function (err) {
             if (err) {
                 return Logger.log(err, "error");
             }
-            Logger.log("Saved js/Hubbers.js");
+            Logger.log("Saved js/Friends.js");
         });
     });
 });
