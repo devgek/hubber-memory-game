@@ -1,12 +1,11 @@
 var matchingGame = {
     elapsedTime: 0
-  , github: new GitHub()
 };
 
 matchingGame.deck = []
 
-function getFriends(callback) {
-    return callback({hubbers: window.Friends});
+function getFriends() {
+    return ({hubbers: window.Friends});
 }
 
 // http://stackoverflow.com/a/2450976/1420197
@@ -119,9 +118,10 @@ $(function(){
     var $loader = $("#loader");
 
     $cards.hide();
-    getFriends(function (hubbers) {
-        for (var i = 0; i < hubbers.hubbers.length; ++i) {
-            matchingGame.deck.push(hubbers.hubbers[i], hubbers.hubbers[i]);
+    var friends = getFriends();
+
+        for (var i = 0; i < friends.hubbers.length; ++i) {
+            matchingGame.deck.push(friends.hubbers[i]);
         }
         shuffle(matchingGame.deck);
         for(var i=0;i<23;i++){
@@ -142,6 +142,7 @@ $(function(){
                 .css("background-size", "128px 128px")
 
             $this.attr("data-pattern",Friend.pair_name);
+            /*$this.addClass("card-flipped");*/
 
             if ($("[data-pattern="+Friend.pair_name+"] .name").text() == "" && Friend.name) {
                 $this.find(".name").text(Friend.name);
@@ -154,5 +155,4 @@ $(function(){
         $cards.fadeIn();
         $loader.fadeOut();
         matchingGame.timer = setInterval(countTimer, 1000);
-    });
-});
+ });
