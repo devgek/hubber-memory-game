@@ -22,5 +22,5 @@ var Friends = [
     {"pair_name":"BrigitteundMartin","name":"Brigitte","picture_path":"/hubber-memory-game/pictures/Brigitte.jpg"},
     {"pair_name":"BrigitteundMartin","name":"Martin","picture_path":"/hubber-memory-game/pictures/Martin.jpg"},
     {"pair_name":"Martina","name":"Martina","picture_path":"/hubber-memory-game/pictures/Martina.jpg"},
-    {"pair_name":"Martina","name":"Joker","picture_path":"/hubber-memory-game/pictures/Joker.jpg"}
+    {"pair_name":"Martina","name":"Julian","picture_path":"/hubber-memory-game/pictures/Julian.jpg"}
 ]
