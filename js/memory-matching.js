@@ -61,10 +61,13 @@ function removeTookCards() {
 }
 
 function gameover() {
+    var $message = $("#message");
+    $message.css("display", "block");
+    var $photo = $("#photo");
+    $photo.css("display", "block");
 }
 
 $(function(){
-
     var $cards = $("#cards");
     var $loader = $("#loader");
 

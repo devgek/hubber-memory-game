@@ -2,14 +2,12 @@
 
 body {
     text-align: center;
-    font-family: 'Sansita One';
-    background: #a46740 url(../images/table.jpg);
-    color: #ccc;
-    text-shadow: 0 1px 0 #222;
+    font-family: 'Arial';
+    background: #b6c387;
+    color: #868D87;
 }
 h1 {
     font-weight: bold;
-    text-shadow: 0 2px 0 #222;
 }
 a, a:visited {
     color: #aea;
@@ -23,6 +21,23 @@ a:hover {
     text-shadow: none;
 }
 
+.vertical {
+    text-align: center;
+    width: 80%;
+    position: relative;
+}
+
+.vertical  > *{
+    display :block;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+#photo {
+    height: 600px;
+}
+
 #game {
     display: -webkit-box;
     -webkit-box-pack: center;
@@ -34,18 +49,17 @@ a:hover {
 }
 
 #message {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    font-size: 20px;
     z-index: -1;
 }
 
 #cards {
+    position: absolute;
+    left: 320px;
     margin-top: 15px;
-    position: relative;
-    width: 900px;
     height: 600px;
     display: none;
+    z-index: 4;
 }
 
 .card {
@@ -84,7 +98,7 @@ a:hover {
 }
 
 .front {
-    background: #FFF url(../images/mark.png) no-repeat;
+    background: #FFF url(../images/50Ballon.jpg) no-repeat;
     z-index: 10;
 }
 
@@ -135,83 +149,6 @@ a:hover {
 
 .card-removed {
     opacity: 0;
-}
-
-#popup {
-    font-family: 'Orbitron', serif;
-    font-size: 28px;
-    font-weight: 700;
-    text-shadow: 0px 1px 2px #fff;
-    color: #222;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,.5);
-    display: -webkit-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    -webkit-transition: all .5s ease-in;
-}
-#popup h1 {
-    font-weight: 400;
-}
-#popup-box {
-    position: relative;
-    width: 400px;
-    height: 300px;
-    background: #ccc;
-    border-radius: 10px;
-    -webkit-box-shadow: 0 5px 5px #333;
-    display: -webkit-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    -webkit-transition: all .5s ease-in;
-}
-#popup-box small {
-    font-size: .6em;
-}
-#popup.hide {
-    background: rgba(0,0,0,0);
-    visibility: hidden;
-}
-#popup.hide #popup-box{
-    margin-top: -800px;
-}
-.ribbon.hide {
-    display: none;
-}
-.ribbon {
-    float: left;
-    position: absolute;
-    left: -7px;
-    top: 165px;
-    z-index: 0;
-    font-size: .5em;
-    text-transform: uppercase;
-    text-align: right;
-}
-.ribbon-body {
-    height: 14px;
-    background: #ca3d33;
-    padding: 6px;
-    z-index: 100;
-    -webkit-box-shadow: 2px 2px 0 rgba(150,120,70,.4);
-    border-radius: 0 5px 5px 0;
-    color: #fff;
-    text-shadow: 0px 1px 1px rgba(0,0,0,.3);
-}
-.triangle{
-    position: relative;
-    height: 0px;
-    width: 0;
-    left: -5px;
-    top: -32px;
-    border-style: solid;
-    border-width: 6px;
-    border-color: transparent #882011 transparent transparent;
-    z-index: -1;
 }
 
 div#loader {

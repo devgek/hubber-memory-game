@@ -1,63 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="icon" type="image/ico" href="favicon.ico"/>
         <meta charset="utf-8">
-        <title>Sandra's Freunde Memory</title>
+        <title>Sandra's GeburtstagsEinladungsFindeDiePaareMemory</title>
         <link href='https://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet" type="text/css" >
         <link rel="stylesheet" href="styles/main.css" />
     </head>
         <body>
             <header>
-                <h1>Sandra's Freunde Memory</h1>
+                <h1>Sandra's GeburtstagsEinladungsFindeDiePaareMemory</h1>
             </header>
             <section id="game">
-                <div id="message">
-                    <div>&nbsp;</div>
-                    <div>Das ist ein Test. Dieser Text liegt hinter den Karten.</div>
-                    <div>asdkfjaskdjf</div>
-                    <div>ksjdfaksjdf</div>
-                    <div>aksdjfask</div>
-                </div>
-                <div id="cards">
-                    <div class="card">
-                        <div class="face front"></div>
-                        <div class="face back">
+                <div class="vertical">
+                    <div id="message" style="display: none; font-weight: bold">
+                        <div>&nbsp;</div>
+                        <div>Ich möchte Euch recht herzlich zu meiner Geburtstagsfeier einladen.</div>
+                        </br>
+                        <div>Wann:  24.11.2018 17 Uhr</div>
+                        </br>
+                        <div>Wo: Waxeneckhütte</div>
+                        </br>
+                        <div>Taxi zur Hütte und/oder wieder nach Hause oder Übernachtung inklusive. </div>
+                        <div>Bitte gebt mir bald Bescheid, wie Ihr Anreisen/Übernachten... wollt, damit ich alles Organisieren kann. </div>
+                        </br>
+                        <div>Ich freue mich auf Euer Kommen und einen lustigen Abend.</div>
+                        <div>&nbsp;</div>
+                    </div>
+                    <div id="photo" style="display: none">
+                        <img src="images/hintergrund.jpg">
+                    </div>
+                    <div id="cards">
+                        <div class="card">
+                            <div class="face front"></div>
+                            <div class="face back">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div id="loader">
                     <div class="three-quarters-loader">
                       Loading…
-                    </div>
-                </div>
-            </section>
-            <section id="popup" class="hide">
-                <div id="popup-bg"></div>
-                <div id="popup-box">
-                    <div class="ribbon hide">
-                        <div class="ribbon-body">
-                            <span>New Record</span>
-                        </div>
-                        <div class="triangle"></div>
-                    </div>
-                    <div id="popup-box-content">
-                        <!--  -->
-                        <!-- <audio id="buttonactive">
-                            <source src="media/06-level-complete.mp3"/>
-                            <source src="media/button_active.ogg"/>
-                            </audio> -->
-                            <!--  -->
-                            <h1>You Won!</h1>
-                            <p>Your Score:</p>
-                            <p><span class='score'>13</span></p>
-                            <p>
-                            <small>
-                                Last Score: <span class='last-score'>20</span><br>
-                                Saved on: <span class='saved-time'>13/4/2011 15:15:15</span>
-                            </small>
-                            </p>
                     </div>
                 </div>
             </section>
